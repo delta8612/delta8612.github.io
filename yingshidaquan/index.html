@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>影视大全官网入口-影视大全官网在线入口_影视大全官网找片与片单入口</title>
+<meta name="description" content="影视大全官网入口页面，说明影视大全官网入口的访问方式、找片路径与片单浏览，帮助用户快速进入影视大全官网入口并找到电影、剧集与综艺的观看线索。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111a2b'/%3E%3Cpath d='M24 20l22 12-22 12z' fill='%23ffb648'/%3E%3Crect x='14' y='14' width='36' height='36' rx='8' fill='none' stroke='%23ffb648' stroke-width='3'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0d1320;
+  --bg-soft:#141d2e;
+  --panel:#1a2436;
+  --line:#2a3852;
+  --text:#e8eef8;
+  --muted:#9db0c9;
+  --gold:#ffb648;
+  --gold-deep:#e08a1e;
+  --teal:#57d0c0;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(900px 420px at 15% -10%, rgba(255,182,72,.13), transparent 60%),
+    radial-gradient(700px 400px at 95% 0%, rgba(87,208,192,.10), transparent 60%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+img,svg{display:block;max-width:100%}
+
+/* 页头 */
+header.site{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(12px);
+  background:rgba(13,19,32,.86);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;gap:24px;
+  min-height:68px;flex-wrap:wrap;
+  padding:10px 0;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+.logo svg{width:34px;height:34px;flex:0 0 auto}
+.logo .brand-text{font-size:19px;color:#fff;white-space:nowrap}
+nav.top{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+nav.top a{
+  font-size:14.5px;color:var(--muted);
+  padding:7px 13px;border-radius:999px;
+  transition:.2s;white-space:nowrap;
+}
+nav.top a:hover,nav.top a:focus-visible{color:#fff;background:rgba(255,182,72,.12)}
+nav.top a.cta{
+  color:#1a1207;background:linear-gradient(135deg,var(--gold),#ffd08a);
+  font-weight:700;
+}
+nav.top a.cta:hover{background:linear-gradient(135deg,#ffc569,var(--gold));color:#1a1207}
+
+/* 首屏 */
+.hero{padding:56px 0 40px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:44px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:1.5px;color:var(--gold);
+  border:1px solid rgba(255,182,72,.35);
+  background:rgba(255,182,72,.08);
+  padding:5px 13px;border-radius:999px;margin-bottom:18px;
+}
+h1{
+  font-size:clamp(28px,4.2vw,44px);
+  line-height:1.25;letter-spacing:.5px;
+  margin-bottom:18px;font-weight:800;
+}
+h1 .accent{
+  background:linear-gradient(120deg,var(--gold),#ffe0a3 70%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{color:var(--muted);font-size:16px;max-width:44ch;margin-bottom:26px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:999px;font-weight:700;font-size:15px;
+  transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:linear-gradient(135deg,var(--gold),#ffd08a);color:#1a1207}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,182,72,.25)}
+.btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-note{font-size:13px;color:#7f92ab;margin-top:14px}
+.hero-art{
+  position:relative;border-radius:22px;overflow:hidden;
+  border:1px solid var(--line);
+  background:linear-gradient(160deg,#1b2740,#111a29);
+  padding:26px;
+}
+.hero-art .screen{
+  border-radius:12px;overflow:hidden;border:1px solid #2e3f5c;
+  background:#0b1220;
+}
+.hero-art .caption{display:flex;justify-content:space-between;font-size:12.5px;color:#8ea3bd;margin-top:14px}
+.hero-art .caption b{color:var(--gold);font-weight:600}
+
+/* 通用区块 */
+section{padding:52px 0}
+.section-head{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.section-head h2{font-size:clamp(21px,2.6vw,27px);font-weight:800;letter-spacing:.3px}
+.section-head h2 span{color:var(--gold)}
+.section-head p{color:var(--muted);font-size:14.5px;margin-left:auto;max-width:46ch}
+.rule{height:1px;background:var(--line);border:0}
+
+/* 找片卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:linear-gradient(180deg,var(--panel),#16202f);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;transition:.22s;
+}
+.card:hover{border-color:rgba(255,182,72,.5);transform:translateY(-3px)}
+.card .ico{
+  width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  background:rgba(255,182,72,.12);margin-bottom:14px;
+}
+.card h3{font-size:16.5px;margin-bottom:8px}
+.card p{font-size:14px;color:var(--muted)}
+.card .tag{display:inline-block;margin-top:12px;font-size:12.5px;color:var(--teal)}
+
+/* 片单 */
+.films{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.film{
+  background:var(--bg-soft);border:1px solid var(--line);
+  border-radius:14px;overflow:hidden;transition:.22s;
+}
+.film:hover{border-color:rgba(87,208,192,.5)}
+.film .poster{
+  height:120px;display:grid;place-items:center;
+  background:linear-gradient(135deg,#1f2c44,#131d2c);
+}
+.film .poster svg{width:44px;height:44px;opacity:.85}
+.film .meta{padding:12px 14px 16px}
+.film .meta strong{display:block;font-size:14.5px;margin-bottom:4px}
+.film .meta span{font-size:12.5px;color:var(--muted)}
+
+/* 步骤 */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
+.step{
+  position:relative;padding:24px 22px 22px;
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:rgba(26,36,54,.6);
+}
+.step::before{
+  counter-increment:step;content:"0" counter(step);
+  font-size:13px;font-weight:800;color:var(--gold);
+  display:inline-block;margin-bottom:10px;letter-spacing:2px;
+}
+.step h3{font-size:16px;margin-bottom:8px}
+.step p{font-size:14px;color:var(--muted)}
+
+/* 正文双栏 */
+.prose-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:36px;align-items:start}
+.prose p{font-size:15px;color:#c9d7e8;margin-bottom:16px}
+.prose p:last-child{margin-bottom:0}
+.aside{
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(180deg,#1a2436,#131c2b);padding:22px;
+}
+.aside h3{font-size:15.5px;margin-bottom:12px;color:var(--gold)}
+.aside ul{list-style:none;font-size:14px;color:var(--muted)}
+.aside li{padding:9px 0;border-bottom:1px dashed var(--line)}
+.aside li:last-child{border-bottom:0}
+
+/* FAQ */
+.faq{display:grid;gap:12px}
+details{
+  border:1px solid var(--line);border-radius:12px;
+  background:var(--bg-soft);padding:16px 20px;
+}
+details[open]{border-color:rgba(255,182,72,.45)}
+summary{
+  cursor:pointer;font-weight:700;font-size:15px;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:18px;font-weight:400}
+details[open] summary::after{content:"−"}
+details p{font-size:14px;color:var(--muted);margin-top:12px}
+
+/* 下载条 */
+.download-bar{
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+  border:1px solid rgba(255,182,72,.35);
+  background:linear-gradient(120deg,rgba(255,182,72,.10),rgba(87,208,192,.07));
+  border-radius:var(--radius);padding:24px 26px;margin-top:8px;
+}
+.download-bar h3{font-size:17px}
+.download-bar p{font-size:13.5px;color:var(--muted);flex:1 1 260px}
+.btn[aria-disabled="true"]{
+  pointer-events:none;opacity:.7;cursor:default;
+}
+
+/* 页脚 */
+footer.site{
+  border-top:1px solid var(--line);padding:34px 0 40px;
+  background:rgba(11,17,28,.7);
+}
+.footer-inner{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+.footer-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15.5px}
+.footer-brand svg{width:26px;height:26px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+.footer-links a:hover{color:var(--gold)}
+.copyright{width:100%;font-size:12.5px;color:#6c7f99;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+
+/* 响应式 */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-art{order:-1;display:none}
+  .cards,.steps{grid-template-columns:1fr 1fr}
+  .films{grid-template-columns:1fr 1fr}
+  .prose-grid{grid-template-columns:1fr;gap:26px}
+}
+@media (max-width:600px){
+  .header-inner{min-height:auto;gap:10px}
+  nav.top{margin-left:0;width:100%;justify-content:flex-start;overflow-x:auto;padding-bottom:4px}
+  nav.top a{padding:6px 11px;font-size:13.5px}
+  .hero{padding:34px 0 30px}
+  .cards,.steps,.films{grid-template-columns:1fr}
+  section{padding:38px 0}
+  .section-head p{margin-left:0}
+  .download-bar{padding:20px}
+  body{line-height:1.8}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="影视大全官网入口 首页">
+      <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#111a2b"/>
+        <rect x="13" y="13" width="38" height="38" rx="9" fill="none" stroke="#ffb648" stroke-width="3"/>
+        <path d="M25 21l19 11-19 11z" fill="#ffb648"/>
+      </svg>
+      <span class="brand-text">影视大全官网入口</span>
+    </a>
+    <nav class="top" aria-label="主导航">
+      <a href="#entry">入口说明</a>
+      <a href="#find">找片路径</a>
+      <a href="#lists">热门片单</a>
+      <a href="#faq">常见疑问</a>
+      <a class="cta" href="#entry">进入官网入口</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">影视资源聚合 · 入口导航</span>
+        <h1>影视大全官网入口</h1>
+        <p class="lead">影视大全官网入口把电影、剧集、综艺与动漫的浏览线索集中在一处。先认清入口，再按类型与片单找片，比在搜索框里反复试词更省时间。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#entry">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            进入官网入口
+          </a>
+          <a class="btn btn-ghost" href="#lists">浏览热门片单</a>
+        </div>
+        <p class="hero-note">入口页仅提供访问路径与内容线索，不存储、不转存任何影视文件。</p>
+      </div>
+      <aside class="hero-art" aria-hidden="true">
+        <div class="screen">
+          <svg viewBox="0 0 320 170" role="img" aria-label="影视播放界面示意图">
+            <rect width="320" height="170" fill="#0b1220"/>
+            <rect x="16" y="16" width="288" height="112" rx="8" fill="#141f31" stroke="#2a3852"/>
+            <circle cx="160" cy="72" r="22" fill="rgba(255,182,72,.16)" stroke="#ffb648" stroke-width="2"/>
+            <path d="M154 63l15 9-15 9z" fill="#ffb648"/>
+            <rect x="16" y="138" width="120" height="8" rx="4" fill="#2a3852"/>
+            <rect x="16" y="138" width="74" height="8" rx="4" fill="#ffb648"/>
+            <rect x="150" y="138" width="40" height="8" rx="4" fill="#2a3852"/>
+            <rect x="202" y="138" width="40" height="8" rx="4" fill="#2a3852"/>
+            <rect x="254" y="138" width="50" height="8" rx="4" fill="#57d0c0" opacity=".6"/>
+          </svg>
+        </div>
+        <div class="caption"><span>电影 · 剧集 · 综艺 · 动漫</span><b>分类浏览</b></div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 入口说明 -->
+  <section id="entry">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>入口怎么用：先分清 <span>官网地址</span> 与聚合页</h2>
+        <p>同名站点较多，影视大全官网入口的价值在于给出可核对的访问顺序。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb648" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg>
+          </div>
+          <h3>核对域名与备案信息</h3>
+          <p>打开页面前先看地址栏域名是否与页内标注一致，再查看页脚的主体与备案信息。域名对不上时，不应继续登录或填写账号。</p>
+          <span class="tag">访问安全</span>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb648" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+          </div>
+          <h3>桌面端与移动端入口</h3>
+          <p>同一站点通常提供网页端与移动端两种访问方式。手机访问时优先使用官方标注的移动入口，避免通过不明二维码跳转到仿冒页面。</p>
+          <span class="tag">访问方式</span>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb648" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          </div>
+          <h3>入口失效后的处理</h3>
+          <p>入口地址可能因站点调整而变化。遇到打不开的情况，先确认网络与浏览器状态，再从官方公告类页面获取最新地址，不要轻信第三方转发的短链。</p>
+          <span class="tag">异常排查</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 找片路径 -->
+  <section id="find">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>进入影视大全官网入口后的 <span>找片路径</span></h2>
+        <p>按三步走，比直接搜索片名更容易发现同类型内容。</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <h3>先按类型缩小范围</h3>
+          <p>电影、剧集、综艺、动漫是常见的四大分区。先选分区，再看年份、地区与语言标签，可以快速排除大量不相关结果。</p>
+        </article>
+        <article class="step">
+          <h3>用片单代替关键词</h3>
+          <p>榜单、编辑精选与高分合集适合没有明确目标时浏览。片单通常带简介与标签，能帮助判断是否符合口味，减少反复试片。</p>
+        </article>
+        <article class="step">
+          <h3>再确认播放与清晰度</h3>
+          <p>选好影片后查看可用的清晰度与字幕选项。若当前线路加载缓慢，可切换其他线路；片源状态以页面实时显示为准。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门片单 -->
+  <section id="lists">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>片单浏览 <span>示例分类</span></h2>
+        <p>以下为入口页常见的内容分区形态，具体片目以官网实时更新为准。</p>
+      </div>
+      <div class="films">
+        <article class="film">
+          <div class="poster">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#57d0c0" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5M16 4v5"/></svg>
+          </div>
+          <div class="meta"><strong>院线电影</strong><span>按上映年份与地区筛选</span></div>
+        </article>
+        <article class="film">
+          <div class="poster">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#57d0c0" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v12H4z"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div class="meta"><strong>连载剧集</strong><span>关注更新节奏与集数</span></div>
+        </article>
+        <article class="film">
+          <div class="poster">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#57d0c0" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="10" r="3.2"/><path d="M5 20c1.6-3.4 4-5 7-5s5.4 1.6 7 5"/></svg>
+          </div>
+          <div class="meta"><strong>综艺节目</strong><span>季播与常驻栏目分开看</span></div>
+        </article>
+        <article class="film">
+          <div class="poster">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#57d0c0" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.4 5.2 5.6.7-4.1 3.9 1.1 5.6L12 15.8 6.9 18.4 8 12.8 3.9 8.9l5.6-.7z"/></svg>
+          </div>
+          <div class="meta"><strong>高分精选</strong><span>按评分与口碑聚合</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 正文 -->
+  <section id="about">
+    <div class="wrap prose-grid">
+      <div class="prose">
+        <h2 style="font-size:22px;margin-bottom:16px">关于影视大全官网入口的几点说明</h2>
+        <p>影视大全官网入口本身是一个访问起点，而不是影片库。它的作用是让用户从名称出发，找到内容分类清晰、更新记录可查的页面。判断一个入口是否值得使用，关键看它是否标明主体信息、是否提供稳定的分类导航，以及影片详情里是否有完整的简介与标签。</p>
+        <p>从内容组织看，成熟的影视聚合站点一般会同时保留三条路径：分类导航、站内搜索与人工片单。分类导航适合有明确类型偏好的人，搜索适合已经知道片名的人，片单则适合只想随便看看的人。影视大全官网入口若能把这三条路径放在首屏可见位置，使用效率会明显提高。</p>
+        <p>需要提醒的是，聚合页展示的影片信息与播放可用性往往来自第三方来源，页面标注的清晰度、字幕与集数可能随线路调整而变化。遇到信息不一致时，以详情页的实时状态为准，不必把入口页的描述当作最终结论。影视大全官网入口页面能做的，是把找片的前置步骤说明清楚，减少无效点击。</p>
+        <p>对经常追剧的用户，建议把常用分区加入浏览器书签，而不是每次重新搜索“影视大全官网入口”。书签指向的是具体分类地址，能跳过首页的推荐位，直接进入更新列表。对偶尔看电影的用户，片单与评分合集更实用，先看简介再决定是否点开，比盲目试片节省时间。</p>
+      </div>
+      <aside class="aside">
+        <h3>入口使用小贴士</h3>
+        <ul>
+          <li>优先记住域名，而不是搜索排名靠前的结果</li>
+          <li>登录前确认页面是否要求多余权限</li>
+          <li>片源卡顿时先切换线路再看清晰度</li>
+          <li>收藏具体分类页，跳过首页推荐位</li>
+          <li>片单更新时间以详情页标注为准</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>影视大全官网入口 <span>常见疑问</span></h2>
+        <p>围绕访问与找片的高频问题，答案以入口页的实际功能范围为准。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>影视大全官网入口是播放器吗？</summary>
+          <p>不是。入口页负责提供访问路径与内容分类说明，影片的实际播放由对应站点的播放页承担。页面本身不托管视频文件。</p>
+        </details>
+        <details>
+          <summary>为什么同一部影片在不同页面显示的信息不同？</summary>
+          <p>影片简介、集数与清晰度可能来自不同来源，更新节奏不一致。遇到差异时，以详情页当前展示的信息为准，入口页内容仅作浏览参考。</p>
+        </details>
+        <details>
+          <summary>手机上访问需要注意什么？</summary>
+          <p>尽量通过官方标注的移动入口进入，不要扫描来源不明的二维码。若页面要求下载额外应用或填写账号密码，应先核对域名是否与官方一致。</p>
+        </details>
+        <details>
+          <summary>找不到想看的片子怎么办？</summary>
+          <p>先用分类导航缩小类型与年份，再尝试片名关键词。仍无结果时，可换用影片的别名或外文名检索，部分条目按译名收录。</p>
+        </details>
+      </div>
+
+      <div class="download-bar">
+        <h3>影视大全官网入口使用手册</h3>
+        <p>整理入口核对顺序、分类找片路径与片单浏览要点，方便保存到本地随时查看。下载地址稍后开放。</p>
+        <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#111a2b"/>
+        <rect x="13" y="13" width="38" height="38" rx="9" fill="none" stroke="#ffb648" stroke-width="3"/>
+        <path d="M25 21l19 11-19 11z" fill="#ffb648"/>
+      </svg>
+      <span>影视大全官网入口</span>
+    </div>
+    <div class="footer-links">
+      <a href="#entry">入口说明</a>
+      <a href="#find">找片路径</a>
+      <a href="#lists">热门片单</a>
+      <a href="#faq">常见疑问</a>
+    </div>
+    <p class="copyright">影视大全官网入口为内容导航页，仅提供分类浏览与访问路径说明，不存储、不制作、不转存任何影视文件。影片信息与可用状态以对应站点实时展示为准。</p>
+  </div>
+</footer>
+
+</body>
+</html>
