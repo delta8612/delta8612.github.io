@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>51免费版视频-免费视频资源在线观看_51免费版视频入口</title>
+<meta name="description" content="51免费版视频主题首页，围绕免费视频在线观看与资源入口，说明51免费版视频的适用场景、内容分类与使用路径，帮助访问者快速找到想看的内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8482c'/%3E%3Cpath d='M24 18l22 14-22 14z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --red:#e8482c;
+  --red-dark:#c93a22;
+  --ink:#1d1f24;
+  --ink-2:#4a4e57;
+  --ink-3:#7c818b;
+  --line:#e6e6e3;
+  --bg:#f7f5f1;
+  --card:#ffffff;
+  --amber:#f2a93b;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,245,241,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  display:flex;align-items:center;gap:18px;
+  height:64px;
+}
+.logo{
+  display:flex;align-items:center;gap:9px;
+  font-weight:800;font-size:19px;letter-spacing:.2px;
+  white-space:nowrap;color:var(--ink);
+}
+.logo .mark{
+  width:32px;height:32px;border-radius:9px;background:var(--red);
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto;
+}
+.logo .mark svg{width:15px;height:15px}
+nav.main{
+  display:flex;gap:4px;margin-left:auto;align-items:center;
+}
+nav.main a{
+  font-size:14.5px;color:var(--ink-2);padding:7px 11px;border-radius:8px;
+  transition:background .18s,color .18s;
+}
+nav.main a:hover{background:#efece6;color:var(--ink)}
+.head-cta{
+  font-size:14px;font-weight:600;color:#fff;background:var(--red);
+  padding:8px 15px;border-radius:9px;white-space:nowrap;
+  transition:background .18s;
+}
+.head-cta:hover{background:var(--red-dark)}
+.menu-toggle{
+  display:none;margin-left:auto;width:40px;height:40px;border:1px solid var(--line);
+  border-radius:9px;background:#fff;cursor:pointer;align-items:center;justify-content:center;
+}
+.menu-toggle span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
+.menu-toggle span::before,.menu-toggle span::after{
+  content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);
+}
+.menu-toggle span::before{top:-6px}
+.menu-toggle span::after{top:6px}
+
+/* ---------- hero ---------- */
+.hero{
+  padding:52px 0 40px;
+  background:
+    radial-gradient(720px 300px at 88% -10%, rgba(232,72,44,.10), transparent 62%),
+    radial-gradient(560px 260px at 4% 110%, rgba(242,169,59,.12), transparent 60%);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:13px;font-weight:600;color:var(--red-dark);
+  background:#fdebe6;padding:5px 12px;border-radius:99px;margin-bottom:18px;
+}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--red);display:block}
+h1{
+  font-size:clamp(30px,4.6vw,46px);
+  line-height:1.22;font-weight:800;letter-spacing:-.5px;
+}
+.hero-lead{
+  margin-top:16px;font-size:16.5px;color:var(--ink-2);max-width:520px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:15px;font-weight:600;padding:11px 22px;border-radius:10px;
+  transition:transform .16s,background .18s,box-shadow .18s;
+}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 20px -8px rgba(232,72,44,.65)}
+.btn-primary:hover{background:var(--red-dark);transform:translateY(-1px)}
+.btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:#cfcbc3;transform:translateY(-1px)}
+.hero-stats{
+  display:flex;gap:30px;margin-top:34px;flex-wrap:wrap;
+}
+.hero-stats div b{display:block;font-size:22px;font-weight:800;letter-spacing:-.3px}
+.hero-stats div span{font-size:13px;color:var(--ink-3)}
+
+/* player card */
+.player{
+  background:#17181c;border-radius:18px;padding:14px;
+  box-shadow:0 26px 50px -24px rgba(23,24,28,.55);
+}
+.screen{
+  position:relative;border-radius:11px;overflow:hidden;
+  background:linear-gradient(145deg,#2a2c33,#1b1d22);
+  aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;
+}
+.screen::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 25%, rgba(232,72,44,.30), transparent 55%);
+}
+.play-btn{
+  position:relative;z-index:2;width:60px;height:60px;border-radius:50%;
+  background:var(--red);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 26px -8px rgba(232,72,44,.8);
+}
+.play-btn svg{width:20px;height:20px;margin-left:3px}
+.screen-tag{
+  position:absolute;z-index:2;left:12px;top:12px;font-size:11.5px;font-weight:600;
+  color:#fff;background:rgba(255,255,255,.16);padding:3px 9px;border-radius:6px;
+  backdrop-filter:blur(4px);
+}
+.player-bar{display:flex;align-items:center;gap:10px;padding:12px 4px 2px}
+.pb-track{flex:1;height:4px;border-radius:99px;background:#3a3d45;overflow:hidden}
+.pb-track i{display:block;height:100%;width:38%;background:var(--red);border-radius:99px}
+.player-bar span{font-size:11.5px;color:#9aa0aa;white-space:nowrap}
+
+/* ---------- section base ---------- */
+section.block{padding:56px 0}
+.sec-head{max-width:660px;margin-bottom:32px}
+.sec-kicker{
+  font-size:13px;font-weight:700;letter-spacing:1.6px;color:var(--red);
+  text-transform:uppercase;margin-bottom:10px;
+}
+h2{font-size:clamp(22px,2.9vw,29px);font-weight:800;line-height:1.3;letter-spacing:-.3px}
+.sec-head p{margin-top:12px;color:var(--ink-2);font-size:15.5px}
+
+/* ---------- category cards ---------- */
+.cats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+.cat{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;transition:transform .18s,box-shadow .18s,border-color .18s;
+}
+.cat:hover{transform:translateY(-3px);box-shadow:0 18px 34px -22px rgba(29,31,36,.4);border-color:#dcd8d0}
+.cat .ico{
+  width:40px;height:40px;border-radius:11px;background:#fdebe6;
+  display:flex;align-items:center;justify-content:center;margin-bottom:15px;
+}
+.cat .ico svg{width:19px;height:19px}
+.cat h3{font-size:16.5px;font-weight:700;margin-bottom:7px}
+.cat p{font-size:14.2px;color:var(--ink-2);line-height:1.65}
+
+/* ---------- steps ---------- */
+.steps-wrap{
+  background:#fff;border:1px solid var(--line);border-radius:20px;
+  padding:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
+}
+.step .num{
+  font-size:13px;font-weight:800;color:var(--red);letter-spacing:1px;margin-bottom:10px;
+}
+.step h3{font-size:16.5px;font-weight:700;margin-bottom:8px}
+.step p{font-size:14.2px;color:var(--ink-2)}
+
+/* ---------- long article ---------- */
+.article-grid{display:grid;grid-template-columns:1.55fr .95fr;gap:40px;align-items:start}
+.prose h2{margin-bottom:16px}
+.prose p{color:var(--ink-2);font-size:15.5px;margin-bottom:15px}
+.prose p strong{color:var(--ink);font-weight:600}
+.aside{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;
+}
+.aside h3{font-size:15.5px;font-weight:700;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.aside ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.aside li{font-size:14.2px;color:var(--ink-2);padding-left:20px;position:relative;line-height:1.6}
+.aside li::before{
+  content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:2px;
+  background:var(--amber);
+}
+
+/* ---------- faq ---------- */
+.faq{display:flex;flex-direction:column;gap:12px}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 20px;
+  transition:border-color .18s;
+}
+details[open]{border-color:#dcd8d0}
+summary{
+  list-style:none;cursor:pointer;padding:17px 0;font-size:15.5px;font-weight:600;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"+";font-size:20px;font-weight:400;color:var(--ink-3);line-height:1;flex:0 0 auto;
+  transition:transform .2s;
+}
+details[open] summary::after{transform:rotate(45deg);color:var(--red)}
+details p{font-size:14.5px;color:var(--ink-2);padding-bottom:18px;margin-top:-4px}
+
+/* ---------- download band ---------- */
+.band{
+  background:linear-gradient(120deg,#1d1f24,#2b2e36);
+  border-radius:20px;padding:40px;color:#fff;
+  display:flex;align-items:center;gap:32px;justify-content:space-between;flex-wrap:wrap;
+}
+.band h2{color:#fff;font-size:clamp(20px,2.6vw,26px)}
+.band p{color:#b9bdc6;font-size:14.5px;margin-top:10px;max-width:480px}
+.band .btn-primary{flex:0 0 auto;box-shadow:none;pointer-events:none;opacity:.95}
+.band .note{font-size:12.5px;color:#8f949f;margin-top:10px}
+
+/* ---------- footer ---------- */
+footer.site{
+  border-top:1px solid var(--line);margin-top:24px;padding:38px 0 30px;
+  background:#f2efe9;
+}
+.foot-top{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.foot-brand{max-width:360px}
+.foot-brand .logo{font-size:17px;margin-bottom:12px}
+.foot-brand p{font-size:13.8px;color:var(--ink-3);line-height:1.7}
+.foot-links{display:flex;gap:52px;flex-wrap:wrap}
+.foot-col h4{font-size:13px;font-weight:700;letter-spacing:.6px;color:var(--ink);margin-bottom:12px}
+.foot-col a{display:block;font-size:13.8px;color:var(--ink-2);padding:3px 0}
+.foot-col a:hover{color:var(--red)}
+.foot-bottom{
+  margin-top:30px;padding-top:18px;border-top:1px solid #e0dcd3;
+  font-size:12.8px;color:var(--ink-3);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .player{max-width:520px}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .steps-wrap{grid-template-columns:1fr;gap:22px;padding:28px}
+  .article-grid{grid-template-columns:1fr;gap:30px}
+}
+@media(max-width:720px){
+  nav.main{
+    display:none;position:absolute;top:64px;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:#fff;border-bottom:1px solid var(--line);padding:8px 16px 16px;
+    box-shadow:0 18px 30px -20px rgba(0,0,0,.25);
+  }
+  nav.main.open{display:flex}
+  nav.main a{padding:12px 6px;border-radius:6px;font-size:15px}
+  .head-cta{display:none}
+  .menu-toggle{display:flex}
+  .head-inner{position:relative}
+  .hero{padding:36px 0 30px}
+  .hero-stats{gap:22px}
+  section.block{padding:42px 0}
+  .cats{grid-template-columns:1fr}
+  .band{padding:28px 22px}
+  .foot-links{gap:34px}
+}
+@media(max-width:400px){
+  .logo{font-size:16.5px}
+  .logo .mark{width:29px;height:29px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <a href="#top" class="logo" aria-label="51免费版视频首页">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7z" fill="#fff"/></svg>
+      </span>
+      <span>51免费版视频</span>
+    </a>
+    <nav class="main" id="nav">
+      <a href="#cats">内容分类</a>
+      <a href="#howto">观看方式</a>
+      <a href="#about">平台说明</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a href="#download" class="head-cta">获取入口</a>
+    <button class="menu-toggle" id="menuBtn" aria-label="展开导航" aria-expanded="false" aria-controls="nav">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><i></i>免费视频资源入口</span>
+        <h1>51免费版视频</h1>
+        <p class="hero-lead">51免费版视频是一个面向日常观看需求的免费视频入口，把影视片段、短片、生活记录与娱乐内容集中在一处，打开就能按分类找到想看的片子，无需反复跳转。</p>
+        <div class="hero-actions">
+          <a href="#cats" class="btn btn-primary">
+            开始浏览内容
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#howto" class="btn btn-ghost">了解观看方式</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>6</b><span>内容分类</span></div>
+          <div><b>3</b><span>步完成观看</span></div>
+          <div><b>免费</b><span>无需付费</span></div>
+        </div>
+      </div>
+
+      <div class="player" aria-label="视频播放界面示意">
+        <div class="screen">
+          <span class="screen-tag">正在浏览</span>
+          <div class="play-btn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 4l13 8-13 8z" fill="#fff"/></svg>
+          </div>
+        </div>
+        <div class="player-bar">
+          <div class="pb-track"><i></i></div>
+          <span>00:00 / 03:24</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="block" id="cats">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Content</div>
+        <h2>51免费版视频的内容分区</h2>
+        <p>按观看场景把内容分成六类，每一类都对应明确的浏览目的，避免在大量条目里盲目翻找。</p>
+      </div>
+      <div class="cats">
+        <article class="cat">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#e8482c" stroke-width="1.8"/><path d="M10 9.5l5 2.5-5 2.5z" fill="#e8482c"/></svg></div>
+          <h3>影视片花</h3>
+          <p>电影与剧集的预告、片段和精彩剪辑，适合在决定看什么之前先扫一眼。</p>
+        </article>
+        <article class="cat">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#e8482c" stroke-width="1.8"/><path d="M12 7.5V12l3 2" stroke="#e8482c" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>短视频</h3>
+          <p>时长较短的内容合集，通勤、休息间隙可以快速看完，节奏轻快不占时间。</p>
+        </article>
+        <article class="cat">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9m5 10V5m5 14v-7m5 7V8" stroke="#e8482c" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>热门榜单</h3>
+          <p>按近期播放与互动情况汇总的条目，帮助第一次访问的人从有代表性的内容入手。</p>
+        </article>
+        <article class="cat">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 1116 0 8 8 0 01-16 0z" stroke="#e8482c" stroke-width="1.8"/><path d="M9 12l2 2 4-4" stroke="#e8482c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>生活记录</h3>
+          <p>美食、旅行、日常片段等纪实类内容，画质与节奏贴近真实的观看体验。</p>
+        </article>
+        <article class="cat">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 6h14M5 12h14M5 18h9" stroke="#e8482c" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>专题合集</h3>
+          <p>把同一主题的多个视频归到一组，连续观看时不必逐个搜索，路径更连贯。</p>
+        </article>
+        <article class="cat">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4l2.4 5 5.6.7-4 3.9 1 5.4-5-2.7-5 2.7 1-5.4-4-3.9 5.6-.7z" stroke="#e8482c" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <h3>新片速览</h3>
+          <p>近期上线的条目集中展示，更新状态以页面实际显示为准，便于了解新增内容。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO -->
+  <section class="block" id="howto">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">How it works</div>
+        <h2>在51免费版视频里找到想看的内容</h2>
+        <p>整个过程围绕浏览与播放展开，不需要注册复杂账号，也不要求先完成付费步骤。</p>
+      </div>
+      <div class="steps-wrap">
+        <div class="step">
+          <div class="num">STEP 01</div>
+          <h3>选择内容分类</h3>
+          <p>先确定这次想看的类型，从影视片花、短视频、生活记录等分区进入，缩小浏览范围。</p>
+        </div>
+        <div class="step">
+          <div class="num">STEP 02</div>
+          <h3>浏览条目与简介</h3>
+          <p>列表页给出标题、封面与简要说明，按需点开详情，判断内容是否符合当下的观看目的。</p>
+        </div>
+        <div class="step">
+          <div class="num">STEP 03</div>
+          <h3>打开播放界面</h3>
+          <p>进入播放页即可观看，播放器提供进度条与时间显示，播放清晰度取决于源文件本身。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / LONG CONTENT -->
+  <section class="block" id="about">
+    <div class="wrap article-grid">
+      <div class="prose">
+        <div class="sec-kicker">About</div>
+        <h2>51免费版视频是什么，适合谁使用</h2>
+        <p><strong>51免费版视频</strong>的定位很直接：把可以免费观看的视频内容整理到一个入口里，让访问者不必在多个站点之间来回切换。它更像一个分类清楚的视频导航页，而不是需要长期订阅的平台。</p>
+        <p>对于只想在碎片时间看点东西的人，<strong>免费视频在线观看</strong>的关键在于“找得快、打开就能播”。51免费版视频把内容按类型和时间长度分开，短视频与长片段各有位置，减少了在无关条目上停留的时间。</p>
+        <p>对于习惯先看评价再决定的人，页面提供了条目简介与分类标签，可以在播放前了解大致内容方向。需要说明的是，内容的具体数量、更新频率和清晰度会随实际维护情况变化，本页不对尚未确认的数据作出承诺。</p>
+        <p>使用<strong>51免费版视频</strong>时，建议优先从热门榜单或专题合集进入，这两类分区经过归类，条目之间的关联更紧密；如果想按兴趣慢慢挑，则可以从内容分类逐个浏览。</p>
+        <p>另外，51免费版视频页面本身不要求安装额外软件即可浏览内容，播放体验受网络环境与设备性能影响。若遇到加载较慢的情况，更换网络或稍后重试通常更有效。</p>
+      </div>
+      <aside class="aside">
+        <h3>使用要点</h3>
+        <ul>
+          <li>按分类浏览，比直接搜索更快定位内容方向。</li>
+          <li>专题合集适合连续观看，减少重复操作。</li>
+          <li>播放前先看简介，能有效避开不感兴趣的内容。</li>
+          <li>内容更新以页面实际显示为准，不作固定频率承诺。</li>
+          <li>无需付费即可浏览，账号类功能视实际提供情况而定。</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">FAQ</div>
+        <h2>关于51免费版视频的常见问题</h2>
+        <p>把访问者最常提出的疑问集中在这里，答案只覆盖页面能够确认的范围。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>51免费版视频需要付费吗？</summary>
+          <p>页面定位为免费视频入口，浏览与播放不设置付费步骤。若后续出现需要额外条件的条目，会以页面实际提示为准。</p>
+        </details>
+        <details>
+          <summary>观看前需要注册账号吗？</summary>
+          <p>浏览内容与播放视频不依赖账号。收藏、记录等辅助功能是否提供，取决于页面当前实际开放的范围。</p>
+        </details>
+        <details>
+          <summary>内容多久更新一次？</summary>
+          <p>更新节奏与内容来源相关，页面不承诺固定周期。新片速览分区会集中展示近期条目，可作为了解增量的参考位置。</p>
+        </details>
+        <details>
+          <summary>播放卡顿怎么办？</summary>
+          <p>先确认网络是否稳定，再尝试刷新页面或更换播放时段。清晰度与加载速度受源文件与本地网络共同影响。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD BAND -->
+  <section class="block" id="download">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>获取51免费版视频入口</h2>
+          <p>下载入口页面，把51免费版视频的浏览地址保存到本地，下次打开更直接。文件内容与说明以实际发布版本为准。</p>
+          <div class="note">下载链接将在正式发布后替换为可用地址。</div>
+        </div>
+        <a href="#" class="btn btn-primary" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none">
+          下载
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="logo">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7z" fill="#fff"/></svg>
+          </span>
+          <span>51免费版视频</span>
+        </div>
+        <p>51免费版视频是一个免费视频内容入口，按分类整理影视片花、短视频与生活记录，帮助访问者更快找到想看的片段。</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>内容</h4>
+          <a href="#cats">内容分类</a>
+          <a href="#cats">热门榜单</a>
+          <a href="#cats">专题合集</a>
+        </div>
+        <div class="foot-col">
+          <h4>使用</h4>
+          <a href="#howto">观看方式</a>
+          <a href="#about">平台说明</a>
+          <a href="#faq">常见问题</a>
+        </div>
+        <div class="foot-col">
+          <h4>入口</h4>
+          <a href="#download">获取入口</a>
+          <a href="#top">返回顶部</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 51免费版视频 · 内容以页面实际显示为准</span>
+      <span>51免费版视频 · 免费视频浏览入口</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var nav=document.getElementById('nav');
+  if(!btn||!nav)return;
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'收起导航':'展开导航');
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'&&window.innerWidth<=720){
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body>
+</html>
