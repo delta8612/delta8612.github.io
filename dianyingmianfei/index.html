@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电影免费在线观看天堂-高清电影免费在线观看_热门影片在线播放</title>
+<meta name="description" content="电影免费在线观看天堂聚合高清电影在线播放入口，按类型、年代与热度浏览影片，查找可直接播放的电影免费在线观看资源，并提供清晰的选片路径与播放说明。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2311172b'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23f5b544' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23f5b544'/%3E%3Cpath d='M32 9v6M32 49v6M9 32h6M49 32h6' stroke='%23f5b544' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0c1020;
+  --bg-soft:#121a30;
+  --card:#16203a;
+  --line:rgba(255,255,255,.09);
+  --gold:#f5b544;
+  --gold-soft:rgba(245,181,68,.14);
+  --text:#e9edf7;
+  --muted:#9aa6c0;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(720px 380px at 12% -8%,rgba(245,181,68,.10),transparent 70%),
+    radial-gradient(680px 420px at 92% 4%,rgba(88,124,255,.13),transparent 72%);
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1160px,92%);margin:0 auto;position:relative;z-index:1}
+
+/* header */
+.site-header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(12,16,32,.86);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;gap:24px;padding:14px 0;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:.4px}
+.logo .mark{width:34px;height:34px;flex:none}
+.logo span{white-space:nowrap}
+.nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nav a{
+  padding:7px 13px;border-radius:999px;font-size:14.5px;color:var(--muted);
+  transition:.2s;
+}
+.nav a:hover,.nav a:focus-visible{color:var(--text);background:rgba(255,255,255,.07)}
+.nav a.primary{color:#141a2b;background:var(--gold);font-weight:700}
+.nav a.primary:hover{background:#ffc963;color:#141a2b}
+
+/* hero */
+.hero{padding:58px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:1px;color:var(--gold);
+  background:var(--gold-soft);border:1px solid rgba(245,181,68,.28);
+  padding:5px 13px;border-radius:999px;margin-bottom:18px;
+}
+h1{
+  font-size:clamp(28px,4.4vw,46px);
+  line-height:1.24;font-weight:800;letter-spacing:.5px;
+}
+h1 .hl{color:var(--gold)}
+.hero p.lead{margin-top:18px;color:var(--muted);font-size:16px;max-width:38em}
+.hero-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:12px;font-size:15px;font-weight:700;
+  border:1px solid transparent;transition:.2s;
+}
+.btn-gold{background:var(--gold);color:#141a2b}
+.btn-gold:hover{background:#ffc963}
+.btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:rgba(245,181,68,.5);color:var(--gold)}
+.btn[aria-disabled="true"]{opacity:.85;pointer-events:none}
+.hero-visual{
+  position:relative;border-radius:22px;overflow:hidden;
+  border:1px solid var(--line);
+  background:linear-gradient(160deg,#1b2647,#101728 70%);
+  padding:22px;
+}
+.hero-visual .reel{width:100%;height:auto}
+.hero-stats{display:flex;gap:18px;margin-top:16px;flex-wrap:wrap}
+.hero-stats div{font-size:13px;color:var(--muted)}
+.hero-stats strong{display:block;font-size:21px;color:var(--gold);font-weight:800;line-height:1.3}
+
+/* section base */
+section{padding:44px 0}
+.sec-head{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.sec-head h2{font-size:clamp(20px,2.6vw,26px);font-weight:800;letter-spacing:.4px}
+.sec-head p{color:var(--muted);font-size:14.5px;max-width:46em}
+.sec-head .tag{margin-left:auto;font-size:12.5px;color:var(--gold);border:1px solid rgba(245,181,68,.3);padding:4px 11px;border-radius:999px}
+
+/* filters */
+.filters{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;margin-bottom:24px;
+}
+.chip{
+  font-size:13.5px;padding:6px 14px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line);background:transparent;color:var(--muted);
+  font-family:inherit;transition:.18s;
+}
+.chip:hover{color:var(--text);border-color:rgba(255,255,255,.22)}
+.chip[aria-pressed="true"]{background:var(--gold);color:#141a2b;border-color:var(--gold);font-weight:700}
+.search-box{margin-left:auto;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:10px;padding:6px 12px}
+.search-box input{
+  background:transparent;border:0;outline:none;color:var(--text);
+  font-family:inherit;font-size:14px;width:170px;
+}
+.search-box input::placeholder{color:#6f7b96}
+
+/* movie grid */
+.movies{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.movie{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.22s;display:flex;flex-direction:column;
+}
+.movie:hover{transform:translateY(-3px);border-color:rgba(245,181,68,.4)}
+.poster{
+  position:relative;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(145deg,#202c4d,#131b30);
+}
+.poster svg{width:54px;height:54px;opacity:.9}
+.badge{
+  position:absolute;top:10px;left:10px;font-size:11.5px;font-weight:700;
+  background:rgba(12,16,32,.78);color:var(--gold);padding:3px 9px;border-radius:6px;
+  border:1px solid rgba(245,181,68,.35);
+}
+.score{position:absolute;top:10px;right:10px;font-size:12px;font-weight:700;color:#141a2b;background:var(--gold);padding:2px 8px;border-radius:6px}
+.movie-body{padding:14px 16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.movie-body h3{font-size:15.5px;font-weight:700}
+.movie-body .meta{font-size:12.5px;color:var(--muted)}
+.movie-body .desc{font-size:13px;color:#b6c0d6;line-height:1.65}
+.movie-body .play{margin-top:auto;font-size:13px;font-weight:700;color:var(--gold);padding-top:8px}
+.movie-body .play::after{content:" →"}
+
+/* guide */
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.guide-card{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;display:flex;flex-direction:column;gap:10px;
+}
+.guide-card .num{
+  width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  background:var(--gold-soft);color:var(--gold);font-weight:800;font-size:15px;
+  border:1px solid rgba(245,181,68,.3);
+}
+.guide-card h3{font-size:16px;font-weight:700}
+.guide-card p{font-size:13.5px;color:var(--muted)}
+
+/* article block */
+.article{
+  background:var(--card);border:1px solid var(--line);border-radius:20px;
+  padding:32px clamp(20px,4vw,42px);
+}
+.article h2{font-size:clamp(20px,2.6vw,25px);margin-bottom:16px;font-weight:800}
+.article h3{font-size:16.5px;margin:24px 0 8px;color:var(--gold);font-weight:700}
+.article p{color:#c3cce0;font-size:14.5px;margin-bottom:12px;max-width:60em}
+.article ul{margin:0 0 14px 0;list-style:none}
+.article li{
+  font-size:14.5px;color:#c3cce0;padding-left:20px;position:relative;margin-bottom:8px;max-width:60em;
+}
+.article li::before{content:"";position:absolute;left:0;top:.72em;width:7px;height:7px;border-radius:2px;background:var(--gold)}
+
+/* faq */
+.faq{display:grid;gap:12px}
+details{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;
+  padding:16px 20px;
+}
+details[open]{border-color:rgba(245,181,68,.35)}
+summary{
+  cursor:pointer;font-size:15px;font-weight:700;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:19px;font-weight:800;flex:none}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;font-size:14px;color:var(--muted);max-width:60em}
+
+/* footer */
+footer{
+  margin-top:40px;border-top:1px solid var(--line);
+  padding:34px 0 40px;background:rgba(9,12,24,.7);
+}
+.footer-inner{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+.footer-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px}
+.footer-brand .mark{width:28px;height:28px;flex:none}
+.footer-note{font-size:13px;color:var(--muted);max-width:42em;margin-top:12px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+.footer-links a:hover{color:var(--gold)}
+.copyright{font-size:12.5px;color:#6f7b96;margin-top:24px}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .hero{padding:38px 0 26px}
+  .guide-grid{grid-template-columns:1fr}
+  .search-box{margin-left:0;width:100%}
+  .search-box input{width:100%}
+}
+@media (max-width:560px){
+  .header-inner{gap:12px;padding:12px 0}
+  .logo{font-size:15px}
+  .nav{margin-left:0;width:100%;gap:4px}
+  .nav a{padding:6px 11px;font-size:13.5px}
+  .movies{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+  .movie-body{padding:12px 13px 15px}
+  .movie-body h3{font-size:14px}
+  .article{padding:24px 18px}
+  section{padding:34px 0}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="电影免费在线观看天堂 首页">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#11172b"/>
+        <circle cx="32" cy="32" r="15" fill="none" stroke="#f5b544" stroke-width="3"/>
+        <circle cx="32" cy="32" r="5" fill="#f5b544"/>
+        <path d="M32 9v6M32 49v6M9 32h6M49 32h6" stroke="#f5b544" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span>电影免费在线观看天堂</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#library">影片库</a>
+      <a href="#guide">播放流程</a>
+      <a href="#about">选片说明</a>
+      <a href="#faq">常见问题</a>
+      <a class="primary" href="#library">开始选片</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">高清影片 · 在线播放 · 分类查找</span>
+        <h1>电影免费在线观看天堂</h1>
+        <p class="lead">这是一个以影片发现为核心的在线观影入口：按类型、年代和热度浏览片单，查看简介与评分，再进入对应播放页。电影免费在线观看天堂把分散的片源入口集中到一页，让找片这件事更有顺序。</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#library">浏览影片库</a>
+          <a class="btn btn-ghost" href="#guide">了解播放流程</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="reel" viewBox="0 0 420 240" role="img">
+          <defs>
+            <linearGradient id="beam" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f5b544" stop-opacity=".85"/>
+              <stop offset="1" stop-color="#587cff" stop-opacity=".55"/>
+            </linearGradient>
+          </defs>
+          <rect x="16" y="26" width="388" height="188" rx="16" fill="#0e1527" stroke="rgba(255,255,255,.08)"/>
+          <rect x="36" y="46" width="150" height="96" rx="10" fill="#1b2647"/>
+          <polygon points="96,74 96,114 128,94" fill="url(#beam)"/>
+          <rect x="200" y="46" width="184" height="14" rx="7" fill="#22304f"/>
+          <rect x="200" y="70" width="140" height="10" rx="5" fill="#1c2947"/>
+          <rect x="200" y="90" width="164" height="10" rx="5" fill="#1c2947"/>
+          <rect x="200" y="110" width="112" height="10" rx="5" fill="#1c2947"/>
+          <rect x="36" y="158" width="348" height="10" rx="5" fill="#1c2947"/>
+          <circle cx="52" cy="186" r="6" fill="#f5b544"/>
+          <rect x="68" y="181" width="86" height="10" rx="5" fill="#22304f"/>
+          <rect x="300" y="176" width="82" height="20" rx="10" fill="rgba(245,181,68,.16)" stroke="rgba(245,181,68,.5)"/>
+        </svg>
+        <div class="hero-stats">
+          <div><strong>6</strong>类型分区</div>
+          <div><strong>4</strong>年代档位</div>
+          <div><strong>在线</strong>直接播放</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影片库 -->
+  <section id="library">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>影片库</h2>
+        <p>按类型与年代筛选片单，点击卡片样式即可查看影片简介与播放入口。所有条目均为演示编排，便于快速判断是否值得打开。</p>
+        <span class="tag">分类索引</span>
+      </div>
+
+      <div class="filters">
+        <button class="chip" type="button" aria-pressed="true" data-filter="all">全部</button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="剧情">剧情</button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="动作">动作</button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="喜剧">喜剧</button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="科幻">科幻</button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="悬疑">悬疑</button>
+        <div class="search-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9aa6c0" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input id="searchInput" type="search" placeholder="搜索片名或类型" aria-label="搜索片名或类型">
+        </div>
+      </div>
+
+      <div class="movies" id="movieGrid">
+        <article class="movie" data-type="剧情" data-name="长夜归途">
+          <div class="poster">
+            <span class="badge">剧情</span><span class="score">8.6</span>
+            <svg viewBox="0 0 64 64" fill="none" stroke="#f5b544" stroke-width="3" aria-hidden="true"><circle cx="32" cy="32" r="22"/><path d="M32 18v16l12 7"/></svg>
+          </div>
+          <div class="movie-body">
+            <h3>长夜归途</h3>
+            <p class="meta">2024 · 剧情 · 118 分钟</p>
+            <p class="desc">一段跨越两代人的返乡旅程，节奏舒缓，适合安静观看。</p>
+            <span class="play">查看播放入口</span>
+          </div>
+        </article>
+
+        <article class="movie" data-type="动作" data-name="疾速边界">
+          <div class="poster">
+            <span class="badge">动作</span><span class="score">8.1</span>
+            <svg viewBox="0 0 64 64" fill="none" stroke="#f5b544" stroke-width="3" aria-hidden="true"><path d="M14 50L32 12l18 38"/><path d="M22 38h20"/></svg>
+          </div>
+          <div class="movie-body">
+            <h3>疾速边界</h3>
+            <p class="meta">2023 · 动作 · 106 分钟</p>
+            <p class="desc">城市追踪与高速追逐为主线的商业动作片，画面节奏紧凑。</p>
+            <span class="play">查看播放入口</span>
+          </div>
+        </article>
+
+        <article class="movie" data-type="科幻" data-name="环形轨道">
+          <div class="poster">
+            <span class="badge">科幻</span><span class="score">8.9</span>
+            <svg viewBox="0 0 64 64" fill="none" stroke="#f5b544" stroke-width="3" aria-hidden="true"><circle cx="32" cy="32" r="10"/><ellipse cx="32" cy="32" rx="25" ry="10" transform="rotate(-25 32 32)"/></svg>
+          </div>
+          <div class="movie-body">
+            <h3>环形轨道</h3>
+            <p class="meta">2024 · 科幻 · 132 分钟</p>
+            <p class="desc">近未来空间站题材，讨论记忆与身份，视觉风格偏冷调。</p>
+            <span class="play">查看播放入口</span>
+          </div>
+        </article>
+
+        <article class="movie" data-type="喜剧" data-name="周末合伙人">
+          <div class="poster">
+            <span class="badge">喜剧</span><span class="score">7.8</span>
+            <svg viewBox="0 0 64 64" fill="none" stroke="#f5b544" stroke-width="3" aria-hidden="true"><circle cx="32" cy="32" r="21"/><path d="M23 27h.1M41 27h.1"/><path d="M23 39c3 4 6 6 9 6s6-2 9-6"/></svg>
+          </div>
+          <div class="movie-body">
+            <h3>周末合伙人</h3>
+            <p class="meta">2022 · 喜剧 · 98 分钟</p>
+            <p class="desc">小成本创业故事，笑点生活化，适合放松时观看。</p>
+            <span class="play">查看播放入口</span>
+          </div>
+        </article>
+
+        <article class="movie" data-type="悬疑" data-name="第七封信">
+          <div class="poster">
+            <span class="badge">悬疑</span><span class="score">8.4</span>
+            <svg viewBox="0 0 64 64" fill="none" stroke="#f5b544" stroke-width="3" aria-hidden="true"><rect x="14" y="26" width="36" height="26" rx="4"/><path d="M22 26v-6a10 10 0 0120 0v6"/></svg>
+          </div>
+          <div class="movie-body">
+            <h3>第七封信</h3>
+            <p class="meta">2023 · 悬疑 · 112 分钟</p>
+            <p class="desc">围绕一叠旧信件展开的调查线，线索推进较为克制。</p>
+            <span class="play">查看播放入口</span>
+          </div>
+        </article>
+
+        <article class="movie" data-type="剧情" data-name="山那边的灯">
+          <div class="poster">
+            <span class="badge">剧情</span><span class="score">8.2</span>
+            <svg viewBox="0 0 64 64" fill="none" stroke="#f5b544" stroke-width="3" aria-hidden="true"><path d="M10 46l12-18 8 10 8-14 16 22z"/><circle cx="46" cy="18" r="5"/></svg>
+          </div>
+          <div class="movie-body">
+            <h3>山那边的灯</h3>
+            <p class="meta">2021 · 剧情 · 124 分钟</p>
+            <p class="desc">乡村教师题材，叙事平实，适合家庭一起观看。</p>
+            <span class="play">查看播放入口</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 播放流程 -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>播放流程</h2>
+        <p>从进入影片库到开始播放，通常只需三步。理解这个顺序，能减少在片源之间反复跳转的时间。</p>
+      </div>
+      <div class="guide-grid">
+        <div class="guide-card">
+          <span class="num">1</span>
+          <h3>先定类型，再定年代</h3>
+          <p>用顶部的类型按钮缩小范围，再结合卡片上的年份与时长判断。剧情、动作、悬疑等标签直接对应影片的主要调性。</p>
+        </div>
+        <div class="guide-card">
+          <span class="num">2</span>
+          <h3>读简介，看评分</h3>
+          <p>简介说明故事背景与观看节奏，评分反映综合口碑。两者结合，比只看片名更容易选到合适的影片。</p>
+        </div>
+        <div class="guide-card">
+          <span class="num">3</span>
+          <h3>进入播放页</h3>
+          <p>点击卡片中的播放入口，进入对应影片的播放页面。电影免费在线观看天堂在此环节只承担索引与入口的作用。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 说明 -->
+  <section id="about">
+    <div class="wrap article">
+      <h2>关于电影免费在线观看天堂的选片方式</h2>
+      <p>很多访问者来到电影免费在线观看天堂时，并不确定要看什么，只知道想找一部能直接播放的电影。因此这个首页把重点放在“发现”上：先给出分类，再给出具体条目，最后给出进入播放的路径。</p>
+
+      <h3>分类与标签的作用</h3>
+      <p>类型标签描述影片的主要叙事方向，年代与时长帮助判断投入成本。对于只想看一部的访问者，先按类型筛选再浏览简介，是效率较高的方式；对于想拓展片单的访问者，可以按评分排序自行比较。</p>
+
+      <h3>影片信息的呈现原则</h3>
+      <ul>
+        <li>片名、年份、类型、时长四项为基础信息，便于快速识别。</li>
+        <li>简介只描述故事方向与观看节奏，不替代完整影评。</li>
+        <li>评分作为横向比较的参考，不代表单一评价标准。</li>
+        <li>播放入口指向对应影片页面，页面内不内嵌第三方播放器。</li>
+      </ul>
+
+      <h3>播放前的准备</h3>
+      <p>建议在稳定的网络环境下播放，并使用支持主流视频格式的浏览器。若播放页加载缓慢，可先返回影片库更换片源，或稍后重试。电影免费在线观看天堂不保存影片文件，播放体验取决于对应片源站点的可用状态。</p>
+
+      <h3>内容更新与反馈</h3>
+      <p>影片库会按新增片目补充条目，已下架或链接失效的条目会被标记。若发现简介与影片内容明显不符，可通过页尾反馈渠道说明，便于后续核对。电影免费在线观看天堂的目标是让找片路径更短、信息更清楚。</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>常见问题</h2>
+        <p>关于查找、播放与内容范围的几个高频疑问。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>电影免费在线观看天堂是否提供影片下载？</summary>
+          <p>页面以在线播放入口为主，不提供影片文件下载。播放与观看均在对应影片页面完成，具体可用性取决于片源状态。</p>
+        </details>
+        <details>
+          <summary>为什么有的影片点开后无法播放？</summary>
+          <p>影片条目指向的片源可能临时调整或维护。遇到这种情况，可以返回影片库选择同类影片，或稍后再次尝试。</p>
+        </details>
+        <details>
+          <summary>影片库的分类依据是什么？</summary>
+          <p>以影片的主要类型为分类依据，配合年份与时长信息。一部影片通常归入一个主类型，避免分类重叠造成查找混乱。</p>
+        </details>
+        <details>
+          <summary>评分和简介来自哪里？</summary>
+          <p>评分与简介为演示性编排内容，用于说明页面的信息组织方式，不代表特定平台的实时数据。正式上线时应替换为可核对的来源。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#11172b"/>
+            <circle cx="32" cy="32" r="15" fill="none" stroke="#f5b544" stroke-width="3"/>
+            <circle cx="32" cy="32" r="5" fill="#f5b544"/>
+            <path d="M32 9v6M32 49v6M9 32h6M49 32h6" stroke="#f5b544" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span>电影免费在线观看天堂</span>
+        </div>
+        <p class="footer-note">电影免费在线观看天堂是一个影片索引与在线播放入口页面，帮助访问者按类型、年代和评分找到合适的高清电影，并快速进入播放页。</p>
+      </div>
+      <div class="footer-links">
+        <a href="#library">影片库</a>
+        <a href="#guide">播放流程</a>
+        <a href="#about">选片说明</a>
+        <a href="#faq">常见问题</a>
+        <a href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 电影免费在线观看天堂 · 页面内容为演示编排，影片信息以正式来源为准。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var chips = document.querySelectorAll('.chip');
+  var grid = document.getElementById('movieGrid');
+  var cards = grid ? Array.prototype.slice.call(grid.querySelectorAll('.movie')) : [];
+  var input = document.getElementById('searchInput');
+  var activeType = 'all';
+
+  function apply(){
+    var q = input ? input.value.trim().toLowerCase() : '';
+    cards.forEach(function(card){
+      var type = card.getAttribute('data-type') || '';
+      var name = (card.getAttribute('data-name') || '').toLowerCase();
+      var typeOk = activeType === 'all' || type === activeType;
+      var qOk = !q || name.indexOf(q) > -1 || type.toLowerCase().indexOf(q) > -1;
+      card.style.display = (typeOk && qOk) ? '' : 'none';
+    });
+  }
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.setAttribute('aria-pressed','false'); });
+      chip.setAttribute('aria-pressed','true');
+      activeType = chip.getAttribute('data-filter') || 'all';
+      apply();
+    });
+  });
+
+  if (input) input.addEventListener('input', apply);
+})();
+</script>
+
+</body>
+                             </html>
